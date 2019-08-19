@@ -14,6 +14,7 @@ import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.util.GenericOptionsParser;
+import org.apache.log4j.BasicConfigurator;
 
 import java.io.IOException;
 import java.util.Iterator;
@@ -21,6 +22,8 @@ import java.util.Iterator;
 public class WordCountCombiner {
 
     public static void main(String[] args) throws Exception {
+        BasicConfigurator.configure();
+
         Configuration c = new Configuration();
         String[] files = new GenericOptionsParser(c, args).getRemainingArgs();
         // arquivo de entrada
