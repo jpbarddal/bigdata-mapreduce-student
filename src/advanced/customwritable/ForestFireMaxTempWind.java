@@ -13,7 +13,7 @@ import org.apache.log4j.BasicConfigurator;
 
 import java.io.IOException;
 
-public class ForestFire {
+public class ForestFireMaxTempWind {
 
     public static void main(String[] args) throws Exception {
         BasicConfigurator.configure();
